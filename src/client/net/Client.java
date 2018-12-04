@@ -122,12 +122,12 @@ public class Client implements Runnable
 
 	public void stop() {
 
-			try {
-				socket.close();
-				socket.keyFor(selector).cancel();
-				socket = null;
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+		try {
+			socket.close();
+			socket.keyFor(selector).cancel();
+			socket = null;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
